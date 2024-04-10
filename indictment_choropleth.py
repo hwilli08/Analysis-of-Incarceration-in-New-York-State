@@ -1,3 +1,5 @@
+##This script generates a choropleth map of percentage of incarcerated individuals in NYS by indicting county.
+
 #Importing necessary libraries.
 import geopandas as gpd
 import pandas as pd
@@ -17,4 +19,4 @@ plt.figure(figsize=(18, 16))
 county_map.plot(column='Percentage', cmap='OrRd', legend=True)
 plt.title('% Incarcerated Individuals by Indicting NYS County (2023)')
 plt.axis('off')
-plt.savefig('indictment_chloropleth.png')
+plt.savefig('indictment_choropleth.png')

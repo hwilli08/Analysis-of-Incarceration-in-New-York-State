@@ -35,5 +35,5 @@ county_boundaries_with_data.plot(column='Non_White_Percentage', cmap='OrRd', leg
 plt.title('% Non-White Incarcerated Ind. by Indicting NYS County (2023)')
 plt.axis('off')
 #Saving the figure.
-plt.savefig('non_white_chloropleth.png')
+plt.savefig('non_white_choropleth.png')
 

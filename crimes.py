@@ -28,7 +28,6 @@ plt.xticks(rotation=45, ha='right', fontsize=10)
 #Adding data labels.
 for bar in bars:
     plt.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 20, str(int(bar.get_height())), ha='center', va='bottom', fontsize=10)
-plt.savefig('top_crimes.png')
 plt.tight_layout()
 plt.savefig('top_crimes.png')
 plt.show()
