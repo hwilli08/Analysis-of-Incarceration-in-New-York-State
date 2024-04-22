@@ -27,8 +27,8 @@ county_counts = county_counts.merge(racial_counts_by_county, on='County of Indic
 top_10_counties = county_counts.head(10)
 if not top_10_counties.empty:
     top_10_counties.set_index('County of Indictment').drop(columns='Total_Count').plot(kind='bar', stacked=True, figsize=(10, 8), color=['#1f77b4', 'brown', '#2ca02c', '#d62728', 'blue', '#9467bd'])
-    plt.title('Racial Distribution of Incarcerated Individuals in Top 10 Counties in NYS (2023)', fontsize=14)
-    plt.xlabel('County', fontsize=12)
+    plt.title('Racial Distribution of Incarcerated Individuals in Top 10 NYS Counties (2023)', fontsize=12)
+    plt.xlabel('Top 10 Indicting Counties with the Highest Amount of Incarcerated Individuals in NYS', fontsize=12)
     plt.ylabel('Number of Incarcerated Individuals', fontsize=12)
     plt.legend(title='Race/Ethnicity')
     plt.xticks(rotation=45, ha='right', fontsize=10)
@@ -43,8 +43,8 @@ if not top_10_counties.empty:
 bottom_5_counties = county_counts.tail(5)
 if not bottom_5_counties.empty:
     bottom_5_counties.set_index('County of Indictment').drop(columns='Total_Count').plot(kind='bar', stacked=True, figsize=(10, 8), color=['#1f77b4', 'brown', '#2ca02c', '#d62728', 'blue', '#9467bd'])
-    plt.title('Racial Distribution of Incarcerated Individuals in Bottom 5 Counties in NYS (2023)', fontsize=14)
-    plt.xlabel('County', fontsize=12)
+    plt.title('Racial Distribution of Incarcerated Individuals in Least 5 Populated Counties in NYS (2023)', fontsize=12)
+    plt.xlabel('Bottom 5 Indicting Counties with the Highest Amount of Incarcerated Individuals in NYS', fontsize=12)
     plt.ylabel('Number of Incarcerated Individuals', fontsize=12)
     plt.legend(title='Race/Ethnicity')
     plt.xticks(rotation=45, ha='right', fontsize=10)

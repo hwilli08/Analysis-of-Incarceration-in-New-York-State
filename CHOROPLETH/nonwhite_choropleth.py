@@ -32,7 +32,7 @@ county_boundaries_with_data = county_boundaries.merge(county_counts, left_index=
 #Plotting the choropleth map showing the intensity of the percentage of non-white individuals.
 plt.figure(figsize=(18, 16))  
 county_boundaries_with_data.plot(column='Non_White_Percentage', cmap='OrRd', legend=True, legend_kwds={'label': '% Non-White Incarcerated Individuals'})
-plt.title('% Non-White Incarcerated Ind. by Indicting NYS County (2023)')
+plt.title('% Non-White Incarcerated Individuals by Indicting NYS County (2023)')
 plt.axis('off')
 
 #Saving the figure.
