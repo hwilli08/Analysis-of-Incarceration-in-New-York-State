@@ -1,4 +1,4 @@
-#This script analyzes data on incarcerated individuals in NYS for 2023, counting occurrences of each most serious crime and categorizing them into 10 groups. It generates bar graphs for the top 10 most frequent crimes and the distribution of crimes by type.
+#This script analyzes data on incarcerated individuals in NYS for 2023, counting occurrences of each most serious crime and categorizing them into relevant groups. It generates bar graphs for the top 10 most frequent crimes and the distribution of crimes by type.
 
 #Importing necessary libraries.
 import pandas as pd
@@ -46,25 +46,26 @@ print(top_10_crimes)
 print("\nLeast 10 Reported Most Serious Crimes:")
 print(least_10_crimes)
 
-#Defining a function to categorize crime types into 10 specific groups.
+#Defining a function to categorize most serious crime types---trying to be as specific as possible!
 def categorize_crime(crime):
-    if 'murder' in crime.lower():
+    crime = crime.upper()  # Convert to uppercase for case-insensitive matching
+    if 'MURDER' in crime:
         return 'Murder'
-    elif 'robbery' in crime.lower():
+    elif 'ROBBERY' in crime:
         return 'Robbery'
-    elif 'burglary' in crime.lower():
+    elif 'BURGLARY' in crime:
         return 'Burglary'
-    elif 'theft' in crime.lower():
+    elif 'THEFT' in crime:
         return 'Theft'
-    elif 'assault' in crime.lower():
+    elif 'ASSAULT' in crime:
         return 'Assault'
-    elif 'rape' in crime.lower():
+    elif 'RAPE' in crime:
         return 'Rape'
-    elif 'sexual abuse' in crime.lower():
+    elif 'SEXUAL ABUSE' in crime:
         return 'Sexual Abuse'
-    elif 'drug' in crime.lower():
+    elif any(keyword in crime for keyword in ['DRUG', 'METH', 'PARAPHER']):  # Check for drug-related keywords
         return 'Drug Offense'
-    elif 'weapon' in crime.lower():
+    elif any(keyword in crime for keyword in ['WEAPON', 'FIREARM']):  # Check for weapon-related keywords
         return 'Weapon Offense'
     else:
         return 'Other'

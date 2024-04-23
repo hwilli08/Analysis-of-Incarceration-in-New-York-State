@@ -27,7 +27,7 @@ county_counts['Non_White_Percentage'] = (county_counts['Non_White_Count'] / coun
 county_boundaries = gpd.read_file("NYS_Civil_Boundaries.gpkg")
 
 #Merging county boundaries with county counts.
-county_boundaries_with_data = county_boundaries.merge(county_counts, left_index=True, right_index=True)
+county_boundaries_with_data = county_boundaries.merge(county_counts, left_on='NAME', right_on='County of Indictment', how='left')
 
 #Plotting the choropleth map showing the intensity of the percentage of non-white individuals.
 plt.figure(figsize=(18, 16))  
@@ -48,4 +48,3 @@ print(top_25_counties[['NAME', 'Non_White_Percentage']].head((25)))
 
 #Writing the top 10 counties data to a CSV file.
 sorted_data.to_csv('percent_nonwhite_sorted_counties.csv', index=False)
-
