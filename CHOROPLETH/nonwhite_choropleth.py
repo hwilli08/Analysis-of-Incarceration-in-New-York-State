@@ -26,8 +26,11 @@ county_counts['Non_White_Percentage'] = (county_counts['Non_White_Count'] / coun
 #Reading the county boundaries GeoPackage file.
 county_boundaries = gpd.read_file("NYS_Civil_Boundaries.gpkg")
 
-#Merging county boundaries with county counts.
-county_boundaries_with_data = county_boundaries.merge(county_counts, left_on='NAME', right_on='County of Indictment', how='left')
+# Convert county names in county_counts to title case
+county_counts['County of Indictment'] = county_counts['County of Indictment'].str.title()
+
+# Merging county boundaries with county counts using outer join to retain all data.
+county_boundaries_with_data = county_boundaries.merge(county_counts, left_on='NAME', right_on='County of Indictment', how='outer')
 
 #Plotting the choropleth map showing the intensity of the percentage of non-white individuals.
 plt.figure(figsize=(18, 16))  
@@ -48,3 +51,13 @@ print(top_25_counties[['NAME', 'Non_White_Percentage']].head((25)))
 
 #Writing the top 10 counties data to a CSV file.
 sorted_data.to_csv('percent_nonwhite_sorted_counties.csv', index=False)
+
+# Check unique county names in county_counts DataFrame
+unique_county_counts_names = county_counts['County of Indictment'].unique()
+print("Unique county names in county_counts DataFrame:")
+print(unique_county_counts_names)
+
+# Check unique county names in county_boundaries DataFrame
+unique_county_boundaries_names = county_boundaries['NAME'].unique()
+print("\nUnique county names in county_boundaries DataFrame:")
+print(unique_county_boundaries_names)

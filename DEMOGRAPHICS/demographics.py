@@ -60,3 +60,17 @@ for bar in bars:
 plt.tight_layout()
 plt.savefig('race_distribution_bar_chart.png')
 plt.show()
+
+# Calculate the total number of non-white and white incarcerated individuals
+non_white_count = race_counts.drop('WHITE').sum()
+white_count = race_counts['WHITE']
+# Calculate the percentages
+non_white_percentage = non_white_count / race_counts.sum() * 100
+white_percentage = white_count / race_counts.sum() * 100
+# Plotting pie chart for race distribution
+plt.figure(figsize=(7, 7))
+plt.pie([non_white_percentage, white_percentage], labels=['Non-White', 'White'], autopct='%1.1f%%', startangle=140, colors=['lightcoral', 'skyblue'])
+plt.title('Race Distribution of Incarcerated Individuals in New York State (2023)')
+plt.tight_layout()
+plt.savefig('race_distribution_pie_chart.png')
+plt.show()
