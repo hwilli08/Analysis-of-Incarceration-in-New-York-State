@@ -1,5 +1,3 @@
-#This script generates stacked bar charts demonstrating the racial distribution of incarcerated individuals in New York state in the snapshot year 2023 by county of indictment.
-
 #Importing the necessary libraries.
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -10,20 +8,17 @@ incarcerated_data = pd.read_csv("Incarcerated_Individuals_Under_Custody_Beginnin
 #Trimming down to year 2023.
 incarcerated_data_2023 = incarcerated_data[incarcerated_data['Snapshot Year'] == 2023]
 
-#Grouping by county of indictment and counting the number of incarcerated individuals.
+#Grouping by county of indictment and count the number of incarcerated individuals.
 county_counts = incarcerated_data_2023.groupby('County of Indictment').size().reset_index(name='Total_Count')
 
-#Calculating the number of non-white individuals for each county.
-nonwhite_counts_by_county = incarcerated_data_2023[incarcerated_data_2023['Race/Ethnicity'] != 'WHITE'].groupby('County of Indictment').size().reset_index(name='Nonwhite_Count')
+#Sorting the counties by count in descending order.
+county_counts = county_counts.sort_values(by='Total_Count', ascending=False)
 
-#Merging the total counts and non-white counts by county.
-county_counts = pd.merge(county_counts, nonwhite_counts_by_county, on='County of Indictment', how='left')
+#Calculating the number of incarcerated individuals by race for each county.
+racial_counts_by_county = incarcerated_data_2023.groupby(['County of Indictment', 'Race/Ethnicity']).size().unstack(fill_value=0)
 
-#Calculating the percentage of non-white individuals for each county.
-county_counts['Nonwhite_Percentage'] = (county_counts['Nonwhite_Count'] / county_counts['Total_Count']) * 100
-
-#Saving the county counts and nonwhite percentages to a CSV file.
-county_counts.to_csv('nonwhite_county_counts.csv', index=False)
+#Joining the racial data with the total count by county.
+county_counts = county_counts.merge(racial_counts_by_county, on='County of Indictment')
 
 #Plotting stacked bar charts for top 10 and bottom 5 counties and saving them.
 #Plotting top 10 counties.
@@ -57,3 +52,18 @@ if not bottom_5_counties.empty:
     plt.tight_layout()
     plt.savefig('bottom_5_counties_race_distribution.png')
     plt.show()
+
+#Grouping by county of indictment and counting the number of incarcerated individuals.
+county_counts = incarcerated_data_2023.groupby('County of Indictment').size().reset_index(name='Total_Count')
+
+#Calculating the number of non-white individuals for each county.
+nonwhite_counts_by_county = incarcerated_data_2023[incarcerated_data_2023['Race/Ethnicity'] != 'WHITE'].groupby('County of Indictment').size().reset_index(name='Nonwhite_Count')
+
+#Merging the total counts and non-white counts by county.
+county_counts = pd.merge(county_counts, nonwhite_counts_by_county, on='County of Indictment', how='left')
+
+#Calculating the percentage of non-white individuals for each county.
+county_counts['Nonwhite_Percentage'] = (county_counts['Nonwhite_Count'] / county_counts['Total_Count']) * 100
+
+#Saving the county counts and percentages to a CSV file.
+county_counts.to_csv('nonwhite_county_counts.csv', index=False)
