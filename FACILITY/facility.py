@@ -55,5 +55,14 @@ if not bottom_10_facilities.empty:
     plt.savefig('bottom_10_facilities_race_distribution.png')
     plt.show()
 
-#Writing facility_counts data to a CSV file.
-facility_counts.to_csv('racial_distribution_by_facility_2023.csv', index=False)
+#Calculating the number of non-white individuals for each housing facility.
+nonwhite_counts = incarcerated_data_2023[incarcerated_data_2023['Race/Ethnicity'] != 'WHITE'].groupby('Housing Facility').size().reset_index(name='Nonwhite_Count')
+
+#Merging the total counts and non-white counts by housing facility.
+facility_counts = pd.merge(facility_counts, nonwhite_counts, on='Housing Facility', how='left')
+
+#Calculating the percentage of non-white individuals for each housing facility.
+facility_counts['Nonwhite_Percentage'] = (facility_counts['Nonwhite_Count'] / facility_counts['Total_Count']) * 100
+
+#Saving the facility counts and percentages to a CSV file.
+facility_counts.to_csv('nonwhite_facility_counts.csv', index=False)
