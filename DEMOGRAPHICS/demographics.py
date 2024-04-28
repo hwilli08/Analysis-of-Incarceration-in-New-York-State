@@ -42,7 +42,7 @@ gender_race_ratios.to_csv('ratios.csv', header=True, index=False)
 
 # Plotting pie and bar charts for gender and race distributions.
 # Gender distribution pie chart
-plt.figure(figsize=(7, 7))
+plt.figure(figsize=(10, 7))
 gender_counts = incarcerated_data_2023['Gender'].value_counts()
 plt.pie(gender_counts, labels=gender_counts.index, autopct='%1.1f%%', startangle=140, colors=['skyblue', 'lightcoral'])
 plt.title('Gender Distribution of Incarcerated Individuals in New York State (2023)')
@@ -70,7 +70,7 @@ non_white_percentage = non_white_count / race_counts.sum() * 100
 white_percentage = white_count / race_counts.sum() * 100
 
 # Plotting pie chart for race distribution
-plt.figure(figsize=(7, 7))
+plt.figure(figsize=(10, 7))
 plt.pie([non_white_percentage, white_percentage], labels=['Non-White', 'White'], autopct='%1.1f%%', startangle=140, colors=['lightcoral', 'skyblue'])
 plt.title('Race Distribution of Incarcerated Individuals in New York State (2023)')
 plt.tight_layout()

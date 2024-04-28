@@ -23,7 +23,7 @@ facility_counts = pd.merge(facility_counts, nonwhite_counts, on='Housing Facilit
 facility_counts['Nonwhite_Percentage'] = (facility_counts['Nonwhite_Count'] / facility_counts['Total_Count']) * 100
 
 #Creating a scatter plot between the percentage of non-white incarcerated individuals and the total number of incarcerated individuals in the facilities.
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10, 7))
 plt.scatter(facility_counts['Total_Count'], facility_counts['Nonwhite_Percentage'], color='brown', alpha=0.5)  # Axes switched
 plt.xlabel('Number of Incarcerated Individuals', fontsize=12)  
 plt.ylabel('% Non-White Individuals', fontsize=12)  
@@ -36,7 +36,7 @@ plt.savefig('total_vs_nonwhite_by_facility.png')
 plt.show()
 
 #Creating a scatter plot between the percentage of non-white incarcerated individuals and the total number of incarcerated individuals in the facilities.
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10, 7))
 plt.scatter(facility_counts['Nonwhite_Percentage'], facility_counts['Total_Count'], color='brown', alpha=0.5)  # Axes switched
 plt.ylabel('Number of Incarcerated Individuals', fontsize=12)  
 plt.xlabel('% Non-White Individuals', fontsize=12)  
