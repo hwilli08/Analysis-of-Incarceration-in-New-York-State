@@ -23,10 +23,10 @@ facility_counts = facility_counts.merge(racial_counts_by_facility, on='Housing F
 facility_counts = facility_counts.sort_values(by='Total_Count', ascending=False)
 
 #Plotting stacked bar charts for top 10 and bottom 10 facilities and saving them.
-#Plotting top 10 facilities.
+#Plotting the top 10 facilities.
 top_10_facilities = facility_counts.head(10)
 if not top_10_facilities.empty:
-    top_10_facilities.set_index('Housing Facility').drop(columns='Total_Count').plot(kind='bar', stacked=True, figsize=(10, 8), color=['#1f77b4', 'brown', '#2ca02c', '#ff7f0e', 'blue', '#8c564b'])
+    top_10_facilities.set_index('Housing Facility').drop(columns='Total_Count').plot(kind='bar', stacked=True, figsize=(10, 8), color=['#BC8F8F', '#A0522D', '#CD853F', '#D2691E', '#8B5A2B', 'tan'])
     plt.title('Racial Distribution of Incarcerated Individuals in Top 10 Facilities in NYS (2023)', fontsize=14)
     plt.xlabel('Housing Facilities with the Highest Amount of Incarcerated Individuals in NYS', fontsize=12)
     plt.ylabel('Number of Incarcerated Individuals', fontsize=12)
@@ -39,10 +39,10 @@ if not top_10_facilities.empty:
     plt.savefig('top_10_facilities_race_distribution.png')
     plt.show()
 
-#Plotting bottom 10 facilities.
+#Plotting the bottom 10 facilities.
 bottom_10_facilities = facility_counts.tail(10)
 if not bottom_10_facilities.empty:
-    bottom_10_facilities.set_index('Housing Facility').drop(columns='Total_Count').plot(kind='bar', stacked=True, figsize=(10, 8), color=['#1f77b4', 'brown', '#2ca02c', '#ff7f0e', 'blue', '#8c564b'])
+    bottom_10_facilities.set_index('Housing Facility').drop(columns='Total_Count').plot(kind='bar', stacked=True, figsize=(10, 8), color=['#BC8F8F', '#A0522D', '#CD853F', '#D2691E', '#8B5A2B', 'tan'])
     plt.title('Racial Distribution of Incarcerated Individuals in Bottom 10 Facilities in NYS (2023)', fontsize=14)
     plt.xlabel('Housing Facilities with the Least Amount of Incarcerated Individuals in NYS', fontsize=12)
     plt.ylabel('Number of Incarcerated Individuals', fontsize=12)
