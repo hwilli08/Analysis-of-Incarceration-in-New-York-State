@@ -1,4 +1,4 @@
-#This script generates scatter plots comparing the percentage of non-white incarcerated individuals to the total number of incarcerated individuals by housing facility and county in the snapshot year 2023.
+#This script generates a scatterplot comparing the percentage of non-white incarcerated individuals to the total number of incarcerated individuals by NYS housing facility in the snapshot year 2023.
 
 #Importing necessary libraries.
 import pandas as pd
@@ -24,23 +24,10 @@ facility_counts['Nonwhite_Percentage'] = (facility_counts['Nonwhite_Count'] / fa
 
 #Creating a scatter plot between the percentage of non-white incarcerated individuals and the total number of incarcerated individuals in the facilities.
 plt.figure(figsize=(10, 7))
-plt.scatter(facility_counts['Total_Count'], facility_counts['Nonwhite_Percentage'], color='brown', alpha=0.5)  # Axes switched
-plt.xlabel('Number of Incarcerated Individuals', fontsize=12)  
-plt.ylabel('% Non-White Individuals', fontsize=12)  
-plt.title('Total # of Incarcerated Individuals vs. % Non-White by Housing Facility (2023)', fontsize=14)  # Axes switched
-plt.xticks(fontsize=10)
-plt.yticks(fontsize=10)
-plt.grid(True)
-plt.tight_layout()
-plt.savefig('total_vs_nonwhite_by_facility.png')
-plt.show()
-
-#Creating a scatter plot between the percentage of non-white incarcerated individuals and the total number of incarcerated individuals in the facilities.
-plt.figure(figsize=(10, 7))
-plt.scatter(facility_counts['Nonwhite_Percentage'], facility_counts['Total_Count'], color='brown', alpha=0.5)  # Axes switched
+plt.scatter(facility_counts['Nonwhite_Percentage'], facility_counts['Total_Count'], color='#8B4513', alpha=0.5) 
 plt.ylabel('Number of Incarcerated Individuals', fontsize=12)  
 plt.xlabel('% Non-White Individuals', fontsize=12)  
-plt.title('% Non-White vs. Total # of Incarcerated Individuals by Housing Facility (2023)', fontsize=14)  # Axes switched
+plt.title('% Non-White vs. Total # of Incarcerated Individuals by NYS Housing Facility (2023)', fontsize=14)
 plt.xticks(fontsize=10)
 plt.yticks(fontsize=10)
 plt.grid(True)
