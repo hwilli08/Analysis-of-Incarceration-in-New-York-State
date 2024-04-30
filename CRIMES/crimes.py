@@ -29,11 +29,11 @@ plt.xticks(rotation=45, ha='right', fontsize=10)
 for bar in bars:
     plt.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 20, str(int(bar.get_height())), ha='center', va='bottom', fontsize=10)
 plt.tight_layout()
-plt.savefig('specific_top_mostseriouscrimes.png')
+plt.savefig('top_mostseriouscrimes.png')
 plt.show()
 
 #Getting lists of the reported most serious crimes.
-top_50_crimes = crimes_counts.head(50)
+top_50_crimes = crime_counts.head(50)
 least_10_crimes = crime_counts.tail(10)
 
 #Printing the top 50 and least 10 reported most serious crimes.
