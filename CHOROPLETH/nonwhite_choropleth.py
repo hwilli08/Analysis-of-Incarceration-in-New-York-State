@@ -49,7 +49,7 @@ top_25_counties = sorted_data.head(25)
 
 #Printing the top 25 counties with their names and non-white percentages.
 print("NYS Indicting Counties Sorted by % Non-White Incarcerated Individuals (Top 25):")
-print(tabulate(top_25_counties[['NAME', 'Non_White_Percentage']].head(25), headers=['County Name', '% Non-White Incarcerated Individuals'], tablefmt='pretty'))
+print(tabulate(top_25_counties[['NAME', 'Non_White_Percentage']].dropna().head(25), headers=['County Name', '% Non-White Incarcerated Individuals'], tablefmt='pretty', showindex=False))
 
 #Writing the nonwhite percentage data to a CSV file.
 sorted_data[['NAME', 'Non_White_Percentage']].to_csv('percent_nonwhite_sorted_counties.csv', index=False)
