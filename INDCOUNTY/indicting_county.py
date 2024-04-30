@@ -1,3 +1,5 @@
+#This script generates stacked bar charts demonstrating the racial distribution of incarcerated individuals in New York state in the snapshot year 2023 by indicting county.
+
 #Importing the necessary libraries.
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -20,12 +22,12 @@ racial_counts_by_county = incarcerated_data_2023.groupby(['County of Indictment'
 #Joining the racial data with the total count by county.
 county_counts = county_counts.merge(racial_counts_by_county, on='County of Indictment')
 
-#Plotting stacked bar charts for top 10 and bottom 5 counties and saving them.
+#Plotting stacked bar charts for top 10 and bottom 5 counties. 
 #Plotting top 10 counties.
 top_10_counties = county_counts.head(10)
 if not top_10_counties.empty:
-    top_10_counties.set_index('County of Indictment').drop(columns='Total_Count').plot(kind='bar', stacked=True, figsize=(10, 8), color=['#1f77b4', 'brown', '#2ca02c', '#d62728', 'blue', '#9467bd'])
-    plt.title('Racial Distribution of Incarcerated Individuals in Top 10 NYS Counties (2023)', fontsize=12)
+    top_10_counties.set_index('County of Indictment').drop(columns='Total_Count').plot(kind='bar', stacked=True, figsize=(10, 8), color=['#BC8F8F', '#A0522D', '#CD853F', '#D2691E', '#8B5A2B', 'tan'])
+    plt.title('Racial Distribution of Incarcerated Individuals in Top 10 Indicting Counties in NYS (2023)', fontsize=12)
     plt.xlabel('Indicting Counties with the Highest Amount of Incarcerated Individuals in NYS', fontsize=12)
     plt.ylabel('Number of Incarcerated Individuals', fontsize=12)
     plt.legend(title='Race/Ethnicity')
@@ -40,7 +42,7 @@ if not top_10_counties.empty:
 #Plotting bottom 5 counties.
 bottom_5_counties = county_counts.tail(5)
 if not bottom_5_counties.empty:
-    bottom_5_counties.set_index('County of Indictment').drop(columns='Total_Count').plot(kind='bar', stacked=True, figsize=(10, 8), color=['#1f77b4', 'brown', '#2ca02c', '#d62728', 'blue', '#9467bd'])
+    bottom_5_counties.set_index('County of Indictment').drop(columns='Total_Count').plot(kind='bar', stacked=True, figsize=(10, 8), color=['#BC8F8F', '#A0522D', '#CD853F', '#D2691E', '#8B5A2B', 'tan'])
     plt.title('Racial Distribution of Incarcerated Individuals in Least 5 Populated Counties in NYS (2023)', fontsize=12)
     plt.xlabel('Indicting Counties with the Lowest Amount of Incarcerated Individuals in NYS', fontsize=12)
     plt.ylabel('Number of Incarcerated Individuals', fontsize=12)

@@ -22,7 +22,7 @@ facility_counts = facility_counts.merge(racial_counts_by_facility, on='Housing F
 #Sorting facilities by total count in descending order.
 facility_counts = facility_counts.sort_values(by='Total_Count', ascending=False)
 
-#Plotting stacked bar charts for top 10 and bottom 10 facilities and saving them.
+#Plotting stacked bar charts for top 10 and bottom 10 facilities. 
 #Plotting the top 10 facilities.
 top_10_facilities = facility_counts.head(10)
 if not top_10_facilities.empty:
