@@ -1,4 +1,4 @@
-#This script analyzes data on incarcerated individuals in NYS for 2023, counting occurrences of each most serious crime and categorizing them into relevant groups. It generates bar graphs for the top 10 most frequent crimes and the distribution of crimes by type.
+#This script analyzes incarcerated individuals' data in NYS for 2023, identifying and visualizing the top 10 most frequent serious crimes committed, offering insights into crime distribution.
 
 #Importing necessary libraries.
 import pandas as pd
@@ -17,13 +17,13 @@ crime_counts.columns = ['Most Serious Crime Committed by Incarcerated Individual
 #Saving the crime counts to CSV file.
 crime_counts.to_csv('total_crime_counts.csv', index=False)
 
-#Creating a bar graph of the top 10 most serious crimes committed.
+#Creating a bar graph of the top 10 most serious crimes committed in snapshot year 2023.
 top_crimes = crime_counts.head(10)
 plt.figure(figsize=(10, 6))
 bars = plt.bar(top_crimes['Most Serious Crime Committed by Incarcerated Individual'], top_crimes['Count'], color='skyblue')
 plt.xlabel('Most Serious Crime Committed', fontsize=12)
 plt.ylabel('Number of Incarcerated Individuals', fontsize=12)
-plt.title('Top Most Serious Crimes Committed by Incarcerated Individuals in NYS in 2023', fontsize=14)
+plt.title('Top Most Serious Crimes Committed by Incarcerated Individuals in NYS (2023)', fontsize=14)
 plt.xticks(rotation=45, ha='right', fontsize=10)
 #Adding data labels.
 for bar in bars:
@@ -33,7 +33,6 @@ plt.savefig('specific_top_mostseriouscrimes.png')
 plt.show()
 
 #Getting lists of the reported most serious crimes.
-top_10_crimes = crime_counts.head(10)
 top_50_crimes = crimes_counts.head(50)
 least_10_crimes = crime_counts.tail(10)
 
