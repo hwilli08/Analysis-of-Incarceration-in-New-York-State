@@ -1,0 +1,28 @@
+{
+    "folders": [
+        {
+            "path": "../CRIME VS"
+        },
+        {
+            "path": "../TIME SERIES"
+        },
+        {
+            "path": "."
+        },
+        {
+            "path": "../CRIMES"
+        },
+        {
+            "path": "../DEMOGRAPHICS"
+        },
+        {
+            "path": "../FACILITY"
+        },
+        {
+            "path": "../INDCOUNTY"
+        },
+        {
+            "path": "../NONWHITE SCATTERPLOT"
+        }
+    ]
+}
