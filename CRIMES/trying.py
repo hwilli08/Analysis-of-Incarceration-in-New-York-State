@@ -23,9 +23,5 @@ df.loc[is_long, 'class'] = "other"
 # Convert the column to lower case
 df['class'] = df['class'].str.lower()
 
-# Join it onto your database (incarcerated_data_2023) using the 'ID' column as the key
-incarcerated_data_2023 = incarcerated_data_2023.merge(df, how='left', on='ID')
 
-# Group by the 'class' column and perform aggregation
-grouped_data = incarcerated_data_2023.groupby('class').count()
 
