@@ -54,48 +54,32 @@ Clone this repository. To reproduce the analysis, follow the order in which the 
 
 By following these instructions and running the scripts in the specified order, you can reproduce the analysis conducted in this repository.
 
-## Results
+## Analysis Results
 The analysis provides insights into the demographic composition, temporal trends, facility distribution, geographical patterns, and crime statistics of incarcerated individuals in NYS for the year 2023.
 
-For any questions or concerns, please contact Hailey Williams (hwilli08@syr.edu).
-
-## Demographics Analysis Outputs
+## Repository Outputs
 - `DEMOGRAPHICS/age_distribution_2023.png`: Histogram visualization of age distribution of incarcerated individuals in NYS in 2023.
 - `DEMOGRAPHICS/demographics_data.csv`: Dataset containing demographic statistics of incarcerated individuals in NYS for 2023.
 - `DEMOGRAPHICS/gender_distribution_pie_chart.png`: Pie chart showing gender distribution of incarcerated individuals in NYS for 2023.
 - `DEMOGRAPHICS/race_distribution_bar_chart.png`: Bar chart showing race distribution of incarcerated individuals in NYS for 2023.
 - `DEMOGRAPHICS/race_distribution_pie_chart.png`: Pie chart showing race distribution of incarcerated individuals in NYS for 2023.
 - `DEMOGRAPHICS/ratios.csv`: Gender and race ratios (Male to Female, Non-white to White) of incarcerated individuals in NYS for 2023.
-
-## Time Series Analysis Outputs
 - `TIME SERIES/timeseries_race_incarcerated_individuals.png`: Time series plot for trends in incarcerated individuals aggregated by race.
 - `TIME SERIES/timeseries_total_incarcerated_individuals.png`: Time series plot for total number of incarcerated individuals.
-
-## Correctional Facility Analysis Outputs
 - `FACILITY/top_10_facilities_race_distribution.png`: Stacked bar chart displaying racial distribution for the correctional facilities in NYS with the highest amounts of incarcerated individuals.
 - `FACILITY/bottom_10_facilities_race_distribution.png`: Stacked bar chart displaying racial distribution for the correctional facilities in NYS with the lowest amounts of incarcerated individuals.
 - `FACILITY/nonwhite_facility_counts.csv`: Counts of non-white individuals in each NYS correctional facility.
-- `FACILITY/security_level_pie.png`:
-- `FACILITY/security_level_trends.png`:
-
-## Indicting County Analysis Outputs
+- `FACILITY/security_level_pie.png`: Pie chart showing distribution of incarcerated individual
+- `FACILITY/security_level_trends.png`: Line chart showing trends in incarceration security levels over time.
 - `INDCOUNTY/top_10_counties_race_distribution.png`: Stacked bar chart displaying racial distribution for the indicting counties in NYS with the highest amounts of incarcerated individuals.
 - `INDCOUNTY/bottom_5_counties_race_distribution.png`: Stacked bar chart displaying racial distribution for the indicting counties in NYS with the lowest amounts of incarcerated individuals.
 - `INDCOUNTY/nonwhite_county_counts.csv`: Counts of non-white individuals incarcerated in each indicting county.
-
-## Variation in Nonwhite Incarceration Outputs
 - `VARIATION/variation_nonwhite_by_county.png`: Variation plot by indicting county.
 - `VARIATION/variation_nonwhite_by_facility.png`: Variation plot by correctional facility.
-
-## Incarceration Choropleth NYS Output
 - `CHOROPLETH/nonwhite_choropleth.png`: Chloropleth map.
 - `CHOROPLETH/percent_nonwhite_sorted_counties.csv`: Percentage of non-white incarcerated individuals sorted by indicting county.
-
-## Crime Analysis Outputs
 - `CRIMES/top_mostseriouscrimes.png`: Visualization of the most frequent serious crimes.
 - `CRIMES/total_crime_counts.csv`: Total counts of each crime.
-
-## Extended Crime Analysis Outputs
 - `CRIME VS/crime_race_heatmap_top10.png`: Heatmap for crime vs. race.
 - `CRIME VS/crime_facility_heatmap_top10.png`: Heatmap for crime vs. facility.
 
