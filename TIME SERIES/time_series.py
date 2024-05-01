@@ -26,6 +26,7 @@ for i, txt in enumerate(yearly_counts):
 plt.xlim(2008, 2023) 
 #Ensuring all years from 2008 to 2023 are labeled.
 plt.xticks(range(2007, 2025))
+plt.ylim(0)
 plt.tight_layout()
 plt.savefig('timeseries_total_incarcerated_individuals.png')
 plt.show()
@@ -53,6 +54,7 @@ for i, txt in enumerate(yearly_race_counts['Non-White']):
 plt.xlim(2008, 2023) 
 #Ensuring all years from 2008 to 2023 are labeled.
 plt.xticks(range(2007, 2025))
+plt.ylim(0)
 plt.tight_layout()
 plt.savefig('timeseries_race_incarcerated_individuals.png') 
 plt.show()

@@ -1,4 +1,4 @@
-#This script generates a chloropleth map of the percent nonwhite incarcerated individuals by indicting county in NYS in the snapshot year 2023.
+#This script generates a choropleth map of the percent nonwhite incarcerated individuals by indicting county in NYS in the snapshot year 2023.
 
 #Importing necessary libraries.
 import pandas as pd
