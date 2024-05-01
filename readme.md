@@ -1,10 +1,25 @@
 # Analysis of Incarcerated Individuals in New York State
 
-This repository contains scripts and visualizations analyzing demographic, temporal, and spatial aspects of incarcerated individuals in New York State (NYS) using data from various sources.
+This repository houses a comprehensive analysis of incarcerated individuals' demographics, trends, facilities, and crimes in New York State for the year 2023. It includes scripts written in Python for data processing, visualization, and interpretation. The analysis covers a wide range of aspects, including age, gender, race, time series trends, facility distribution, indicting county demographics, variation from average non-white percentages, choropleth mapping, and crime statistics. Each script is meticulously documented, detailing its purpose and methodology. The provided visualizations offer clear insights into the distribution and characteristics of the incarcerated population, aiding policymakers, researchers, and the public in understanding and addressing issues related to incarceration, demographics, and criminal justice in New York State. This repository serves as a valuable resource for further research, policymaking, and advocacy efforts aimed at improving the criminal justice system and addressing disparities within it.
 
-## Data Sources
+## Input Data Sources
 - [Incarcerated Individuals Under Custody Beginning 2008](https://data.ny.gov/Public-Safety/Incarcerated-Individuals-Under-Custody-Beginning-2/55zc-sp6m/about_data)
+
+This core dataset provides comprehensive information on individuals under custody in New York State, starting from 2008. It encompasses data on demographics, crimes committed, and facility details, offering insights into trends and patterns within the state's criminal justice system over time. 
+
 - [NYS Civil Boundaries](https://data.gis.ny.gov/datasets/sharegisny::nys-civil-boundaries/explore?layer=2&location=42.846702%2C-78.687173%2C7.82&showTable=true)
+
+By providing detailed geographical boundaries of administrative units such as counties, cities, towns, and villages within New York State, this dataset enables the creation of accurate and informative choropleth maps that depict various socio-demographic characteristics, including the distribution of incarcerated individuals by indicting county. Choropleth maps created using this dataset allow for the visualization of regional disparities in incarceration rates, demographic composition, and other relevant factors, facilitating a better understanding of the spatial dynamics of the criminal justice system and informing policy decisions aimed at addressing disparities and promoting equity across different regions of New York State.
+
+## Instructions
+1. Clone this repository.
+2. Navigate to each directory and run the specified analyses and scripts in the mentioned order to reproduce the analysis.
+3. Required libraries: pandas, matplotlib, seaborn.
+
+## Results
+The analysis provides insights into the demographic composition, temporal trends, facility distribution, geographical patterns, and crime statistics of incarcerated individuals in NYS for the year 2023.
+
+For any questions or concerns, please contact Hailey Williams (hwilli08@syr.edu).
 
 ## Demographics Analysis
 - `DEMOGRAPHICS/age_distribution.py`: This script analyzes the age distribution among individuals incarcerated in the snapshot year 2023 and plots a histogram.
@@ -54,12 +69,4 @@ This repository contains scripts and visualizations analyzing demographic, tempo
 - `CRIME VS/crime_race_heatmap_top10.png`: Heatmap for crime vs. race.
 - `CRIME VS/crime_facility_heatmap_top10.png`: Heatmap for crime vs. facility.
 
-## Instructions
-1. Clone this repository.
-2. Navigate to each directory and run the specified scripts in the mentioned order to reproduce the analysis.
-3. Required libraries: pandas, matplotlib, seaborn.
 
-## Results
-The analysis provides insights into the demographic composition, temporal trends, facility distribution, geographical patterns, and crime statistics of incarcerated individuals in NYS for the year 2023.
-
-For any questions or concerns, please contact Hailey Williams (hwilli08@syr.edu).
