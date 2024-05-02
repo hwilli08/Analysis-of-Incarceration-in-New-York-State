@@ -12,7 +12,7 @@ This core dataset provides comprehensive information on individuals under custod
 By providing detailed geographical boundaries of administrative units such as counties, cities, towns, and villages within New York State, this dataset enables the creation of accurate and informative choropleth maps that depict various socio-demographic characteristics, including the distribution of incarcerated individuals by indicting county. Choropleth maps created using this dataset allow for the visualization of regional disparities in incarceration rates, facilitating a better understanding of the spatial dynamics of the criminal justice system and informing policy decisions aimed at promoting equity across different regions of New York State.
 
 ## Instructions
-Download the required libraries (pandas, matplotlib, and tabulate).
+Download the required libraries (pandas, matplotlib, seaborn, and tabulate).
 
 To obtain the original input data used in this analysis, follow these steps:
 
