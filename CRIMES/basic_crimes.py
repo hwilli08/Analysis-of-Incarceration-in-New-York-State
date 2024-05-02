@@ -20,7 +20,7 @@ crime_counts.to_csv('total_crime_counts.csv', index=False)
 #Creating a bar graph of the top 10 most serious crimes committed in snapshot year 2023.
 top_crimes = crime_counts.head(10)
 plt.figure(figsize=(10, 6))
-bars = plt.bar(top_crimes['Most Serious Crime Committed by Incarcerated Individual'], top_crimes['Count'], color='skyblue')
+bars = plt.bar(top_crimes['Most Serious Crime Committed by Incarcerated Individual'], top_crimes['Count'], color='#8B4513')
 plt.xlabel('Most Serious Crime Committed', fontsize=12)
 plt.ylabel('Number of Incarcerated Individuals', fontsize=12)
 plt.title('Top Most Serious Crimes Committed by Incarcerated Individuals in NYS (2023)', fontsize=14)
