@@ -102,8 +102,9 @@ The analysis provides insights into the demographic composition, temporal trends
 **CRIMES:** The total number of crimes in 2023 in NYS was 10,447,470. The most frequently most serious crime committed by incarcerated individuals in NYS in 2023 was second degree murder (4,111), followed by criminal possession of a weapon in the second degree (2,152), and manslaughter in the first degree (2,007). When the crimes were categorized, violent crimes were the most frequent most serious crime committed (2,785,992), followed by sex crimes (1,551,291), and white collar crimes (1,298,019). Overall, the percentage distribution of incarcerated individuals in NYS by crime type in 2023 was: 26.66% violent crime; 14.84% sex crime; 12.42% white collar crime; 10% burglary and theft; 9.69% drug offenses; 8.78% crimes involving children; and 8.18% weapons offenses. The heatmap demonstrating the relationship between crime category and the largest NYS jails and prisons shows that the largest numbers of individuals incarcerated for violent crimes are housed in Attice General, Green Haven, and Sing Sing General. The heatmap displaying the relationship between crime category and the race/ethnicity of incarcerated individuals in NYS shows that the largest numbers of individuals incarcerated for violent crimes are Black (1,369,368), Hispanic (662,552), and White (634,304).
 ![Alt text](CRIMES/crime_type_pie_chart.png)
 ![Alt text](CRIMES/top_mostseriouscrimes.png)
-![Alt text](CRIMES/crime_and_facilities_heatmap.png)
 ![Alt text](CRIMES/crime_and_race_heatmap.png)
+![Alt text](CRIMES/crime_and_facilities_heatmap.png)
+![Alt text](CRIMES/crime_and_counties_heatmap.png)
 
 ## Repository Outputs
 - `DEMOGRAPHICS/age_distribution_2023.png`: Histogram visualization of age distribution of incarcerated individuals in NYS in 2023.
