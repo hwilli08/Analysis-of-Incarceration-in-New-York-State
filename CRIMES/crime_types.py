@@ -95,3 +95,18 @@ plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
 plt.savefig('crime_and_race_heatmap.png')
 plt.show()
+
+#Relationship between crime category and indicting counties with the highest number of incarcerated individuals
+top_counties = incarcerated_data_2023.groupby('County of Indictment').size().nlargest(10).index
+county_crime_counts = merged_data[merged_data['County of Indictment'].isin(top_counties)].groupby(['County of Indictment', 'category']).size().unstack(fill_value=0)
+
+#Plotting a heatmap for the relationship between crime category and indicting counties.
+plt.figure(figsize=(14, 10))
+sns.heatmap(county_crime_counts, cmap='YlOrBr', annot=True, fmt='d', cbar=False)
+plt.title('Relationship between Crime Category and Top 10 Indicting Counties with Highest Incarceration Rates (2023)')
+plt.xlabel('Crime Category')
+plt.ylabel('Indicting County')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.savefig('crime_and_counties_heatmap.png')
+plt.show()

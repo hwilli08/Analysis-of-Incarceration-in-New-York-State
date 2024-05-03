@@ -49,7 +49,7 @@ Clone this repository. To reproduce the analysis, follow the order in which the 
 
 7. **Crime Analysis:**
    - Execute `CRIMES/basic_crimes.py` to analyze the top 10 most frequent serious crimes committed.
-   - Run `CRIMES/crime_classes.py` to sort through the csv file generated from the previous step of the analysis and categorize each crime. The resulting CSV file, named `Prof_Wilcoxen_GPT.csv`, provides a structured classification of crimes, facilitating further analysis and visualization of crime statistics. It is filed under the 'CRIMES' folder in this repository directory. Special shout out to Prof. Wilcoxen for his support in generating the AI sorting tool. **Those without openAI access or an API key may use the csv file copied in the repository rather than generating their own using this script.**
+   - Run `CRIMES/crime_classes.py` to sort through the csv file generated from the previous step of the analysis and categorize each crime. The resulting CSV file, named `Prof_Wilcoxen_GPT.csv`, provides a structured classification of crimes, facilitating further analysis and visualization of crime statistics. It is filed under the 'CRIMES' folder in this repository directory. Special shout out to Prof. Wilcoxen for his support in generating the AI sorting tool. **Those without openAI access or an API key may use the csv file copied in the repository rather than generating their own.**
    - Run `CRIMES/crime_types.py` to analyze the relationship between top crimes and race/facility using heatmaps.
 
 By following these instructions and running the scripts in the specified order, you can reproduce the analysis conducted in this repository.
@@ -132,5 +132,6 @@ The analysis provides insights into the demographic composition, temporal trends
 - `CRIMES/crime_type_pie_chart.png`: Pie chart depicting the percentage distribution of incarcerated individuals in NYS by crime type for 2023.
 - `CRIMES/crime_and_facilities_heatmap.png`: Heatmap showing the relationship between crime categories and the top 10 NYS correctional facilities for 2023.
 - `CRIMES/crime_and_race_heatmap.png`: Heatmap visualizing the relationship between crime categories and race/ethnicity of incarcerated individuals in NYS for 2023.
+- `CRIMES/crime_and_counties_heatmap.png`: Heatmap visualizing the relationship between crime categories and the top 10 NYS indicting counties with the highest number of incarcerated individuals in NYS for 2023.
 
 
