@@ -74,25 +74,24 @@ The analysis provides insights into the demographic composition, temporal trends
 
 **CHOROPLETH:** The chloropleth map displays the percentage of non-white incarcerated individuals by indicting county in New York State. Many of the indicting counties with the highest percentages are also counties with relatively higher numbers of nonwhite citizens. A table displaying the indicting counties with the highest nonwhite percentages is copied under the choropleth for context.
 
-![Alt text](CHOROPLETH/nonwhite_choropleth.png)
-+-------------+--------------------------------------+
+                                    ![Alt text](CHOROPLETH/nonwhite_choropleth.png)
 | County Name | % Non-White Incarcerated Individuals |
-+-------------+--------------------------------------+
-|    Bronx    |          97.97169811320755           |
-|    Kings    |          94.76439790575915           |
-|  New York   |           94.7075882068632           |
-|   Queens    |          94.56205894562059           |
-| Westchester |           90.8246225319396           |
-|   Monroe    |          86.42996108949417           |
-|   Nassau    |          85.30805687203792           |
-|  Richmond   |           85.1985559566787           |
-|  Rockland   |           84.7457627118644           |
-|   Albany    |          82.05625606207565           |
-|    Erie     |          81.65680473372781           |
-| Schenectady |           79.0909090909091           |
-|   Suffolk   |          76.36103151862464           |
-|  Onondaga   |          76.20738636363636           |
-+-------------+--------------------------------------+
+|-------------|--------------------------------------|
+| Bronx       | 97.97                                |
+| Kings       | 94.76                                |
+| New York    | 94.71                                |
+| Queens      | 94.56                                |
+| Westchester | 90.82                                |
+| Monroe      | 86.43                                |
+| Nassau      | 85.31                                |
+| Richmond    | 85.20                                |
+| Rockland    | 84.75                                |
+| Albany      | 82.06                                |
+| Erie        | 81.66                                |
+| Schenectady | 79.09                                |
+| Suffolk     | 76.36                                |
+| Onondaga    | 76.21                                |
+
 
 **CRIMES:** The total number of crimes in 2023 in NYS was 10,447,470. The most frequently most serious crime committed by incarcerated individuals in NYS in 2023 was second degree murder (4,111), followed by criminal possession of a weapon in the second degree (2,152), and manslaughter in the first degree (2,007). When the crimes were categorized, violent crimes were the most frequent most serious crime committed (2,785,992), followed by sex crimes (1,551,291), and white collar crimes (1,298,019). Overall, the percentage distribution of incarcerated individuals in NYS by crime type in 2023 was: 26.66% violent crime; 14.84% sex crime; 12.42% white collar crime; 10% burglary and theft; 9.69% drug offenses; 8.78% crimes involving children; and 8.18% weapons offenses. The heatmap demonstrating the relationship between crime category and the largest NYS jails and prisons shows that the largest numbers of individuals incarcerated for violent crimes are housed in Attice General, Green Haven, and Sing Sing General. The heatmap displaying the relationship between crime category and the race/ethnicity of incarcerated individuals in NYS shows that the largest numbers of individuals incarcerated for violent crimes are Black (1,369,368), Hispanic (662,552), and White (634,304).
 
