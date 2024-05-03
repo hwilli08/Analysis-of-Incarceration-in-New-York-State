@@ -48,9 +48,7 @@ Clone this repository. To reproduce the analysis, follow the order in which the 
 
 7. **Crime Analysis:**
    - Execute `CRIMES/basic_crimes.py` to analyze the top 10 most frequent serious crimes committed.
-
-8. **Extended Crime Analysis:**
-   - Run `CRIME VS/crimes_heatmap.py` to analyze the relationship between top crimes and race/facility using heatmaps.
+   - Run `CRIMES/crime_types.py` to analyze the relationship between top crimes and race/facility using heatmaps.
 
 By following these instructions and running the scripts in the specified order, you can reproduce the analysis conducted in this repository.
 
@@ -80,7 +78,9 @@ The analysis provides insights into the demographic composition, temporal trends
 - `CHOROPLETH/percent_nonwhite_sorted_counties.csv`: Percentage of non-white incarcerated individuals sorted by indicting county.
 - `CRIMES/top_mostseriouscrimes.png`: Visualization of the most frequent serious crimes.
 - `CRIMES/total_crime_counts.csv`: Total counts of each crime.
-- `CRIME VS/crime_race_heatmap_top10.png`: Heatmap for crime vs. race.
-- `CRIME VS/crime_facility_heatmap_top10.png`: Heatmap for crime vs. facility.
+- `CRIMES/crime_type_bar_chart.png`:
+- `CRIMES/crime_type_pie_chart.png`:
+- `CRIMES/crime_and_facilities_heatmap.png`:
+- `CRIMES/crime_and_race_heatmap.png`:
 
 
