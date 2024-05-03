@@ -43,7 +43,7 @@ if not top_10_counties.empty:
 bottom_5_counties = county_counts.tail(5)
 if not bottom_5_counties.empty:
     bottom_5_counties.set_index('County of Indictment').drop(columns='Total_Count').plot(kind='bar', stacked=True, figsize=(10, 8), color=['#BC8F8F', '#A0522D', '#CD853F', '#D2691E', '#8B5A2B', 'tan'])
-    plt.title('Racial Distribution of Incarcerated Individuals in Least 5 Populated Counties in NYS (2023)', fontsize=12)
+    plt.title('Racial Distribution of Incarcerated Individuals in Bottom 5 Indicting Counties in NYS (2023)', fontsize=12)
     plt.xlabel('Indicting Counties with the Lowest Amount of Incarcerated Individuals in NYS', fontsize=12)
     plt.ylabel('Number of Incarcerated Individuals', fontsize=12)
     plt.legend(title='Race/Ethnicity')

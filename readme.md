@@ -9,7 +9,7 @@ This core dataset provides comprehensive information on individuals under custod
 
 - [NYS Civil Boundaries](https://data.gis.ny.gov/datasets/sharegisny::nys-civil-boundaries/explore?layer=2&location=42.846702%2C-78.687173%2C7.82&showTable=true)
 
-By providing detailed geographical boundaries of administrative units such as counties, cities, towns, and villages within New York State, this dataset enables the creation of accurate and informative choropleth maps that depict various socio-demographic characteristics, including the distribution of incarcerated individuals by indicting county. Choropleth maps created using this dataset allow for the visualization of regional disparities in incarceration rates. It is filed under the 'CHOROPLETH' folder in this repository directory.
+By providing detailed geographical boundaries of administrative units such as counties, cities, towns, and villages within New York State, this dataset enables the creation of accurate and informative choropleth maps that depict various socio-demographic characteristics, including the distribution of incarcerated individuals by indicting county. Choropleth maps created using this dataset allow for the visualization of regional disparities in incarceration rates. This data is filed under the 'CHOROPLETH' folder in this repository directory.
 
 ## Instructions
 Download the required libraries (pandas, matplotlib, seaborn, openai, and tabulate).
