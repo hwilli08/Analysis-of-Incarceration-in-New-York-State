@@ -11,12 +11,8 @@ This core dataset provides comprehensive information on individuals under custod
 
 By providing detailed geographical boundaries of administrative units such as counties, cities, towns, and villages within New York State, this dataset enables the creation of accurate and informative choropleth maps that depict various socio-demographic characteristics, including the distribution of incarcerated individuals by indicting county. Choropleth maps created using this dataset allow for the visualization of regional disparities in incarceration rates. It is filed under the 'CHOROPLETH' folder in this repository directory.
 
-- [Professor Wilcoxen's ChatGPT Crime Sorting Script] (INSERT HERE?)
-
-This Python script, created by Prof. Wilcoxen, sorts through the total_crime_counts.csv file generated from step 7a of the analysis and categorizes each crime entry into a specific category. The resulting CSV file, named `Prof_Wilcoxen_GPT.csv`, provides a structured classification of crimes, facilitating further analysis and visualization of crime statistics. It is filed under the 'CRIMES' folder in this repository directory.
-
 ## Instructions
-Download the required libraries (pandas, matplotlib, seaborn, and tabulate).
+Download the required libraries (pandas, matplotlib, seaborn, openai, and tabulate).
 
 To obtain the original input data used in this analysis, follow these steps:
 
@@ -27,9 +23,6 @@ To obtain the original input data used in this analysis, follow these steps:
 2. **NYS Civil Boundaries:**
    - Access the [NYS Civil Boundaries dataset](https://data.gis.ny.gov/datasets/sharegisny::nys-civil-boundaries/explore?layer=2&location=42.846702%2C-78.687173%2C7.82&showTable=true).
     - Download the dataset from the provided link.
-
-3. **Professor Wilcoxen's ChatGPT Crime Sorting Script:**
-   - Clone this repository, ensuring that the script (INSERT HERE?) is filed under the directory folder 'CRIMES.' When prompted later in the instructions, run this script to generate file (`Prof_Wilcoxen_GPT.csv`).
 
 Clone this repository. To reproduce the analysis, follow the order in which the scripts should be run. Be sure to move the necessary input files into the repository directory file you are working with at each step. 
 
@@ -56,7 +49,7 @@ Clone this repository. To reproduce the analysis, follow the order in which the 
 
 7. **Crime Analysis:**
    - Execute `CRIMES/basic_crimes.py` to analyze the top 10 most frequent serious crimes committed.
-   - Run `CRIMES/(INSERT HERE?)` to categorize crime entries for analysis and create output file () for use in the next script.
+   - Run `CRIMES/crime_classes.py` to sort through the csv file generated from the previous step of the analysis and categorize each crime. The resulting CSV file, named `Prof_Wilcoxen_GPT.csv`, provides a structured classification of crimes, facilitating further analysis and visualization of crime statistics. It is filed under the 'CRIMES' folder in this repository directory. Special shout out to Prof. Wilcoxen for his support in generating the AI sorting tool.
    - Run `CRIMES/crime_types.py` to analyze the relationship between top crimes and race/facility using heatmaps.
 
 By following these instructions and running the scripts in the specified order, you can reproduce the analysis conducted in this repository.
