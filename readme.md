@@ -13,7 +13,7 @@ By providing detailed geographical boundaries of administrative units such as co
 
 - [Professor Wilcoxen's ChatGPT Crime Sorting Script] (INSERT HERE?)
 
-This Python script, created by Prof. Wilcoxen, sorts through the total_crime_counts.csv file generated from step 7a of the analysis and categorizes each crime entry into a specific category. The resulting CSV file, named "Prof_Wilcoxen_GPT.csv," provides a structured classification of crimes, facilitating further analysis and visualization of crime statistics.
+This Python script, created by Prof. Wilcoxen, sorts through the total_crime_counts.csv file generated from step 7a of the analysis and categorizes each crime entry into a specific category. The resulting CSV file, named `Prof_Wilcoxen_GPT.csv`, provides a structured classification of crimes, facilitating further analysis and visualization of crime statistics.
 
 ## Instructions
 Download the required libraries (pandas, matplotlib, seaborn, and tabulate).
@@ -29,7 +29,7 @@ To obtain the original input data used in this analysis, follow these steps:
     - Download the dataset from the provided link.
 
 3. **Professor Wilcoxen's ChatGPT Crime Sorting Script:**
-   - Clone this repository, ensuring that the script (INSERT HERE?) is filed under the directory folder 'CRIMES.' When prompted later in the instructions, run this script to generate file ("Prof_Wilcoxen_GPT.csv").
+   - Clone this repository, ensuring that the script (INSERT HERE?) is filed under the directory folder 'CRIMES.' When prompted later in the instructions, run this script to generate file (`Prof_Wilcoxen_GPT.csv`).
 
 Clone this repository. To reproduce the analysis, follow the order in which the scripts should be run. Be sure to move the necessary input files into the repository directory file you are working with at each step. 
 
@@ -56,7 +56,7 @@ Clone this repository. To reproduce the analysis, follow the order in which the 
 
 7. **Crime Analysis:**
    - Execute `CRIMES/basic_crimes.py` to analyze the top 10 most frequent serious crimes committed.
-   - Run `CRIMES/(INSERT HERE?) to categorize crime entries for analysis and create output file () for use in the next script.
+   - Run `CRIMES/(INSERT HERE?)` to categorize crime entries for analysis and create output file () for use in the next script.
    - Run `CRIMES/crime_types.py` to analyze the relationship between top crimes and race/facility using heatmaps.
 
 By following these instructions and running the scripts in the specified order, you can reproduce the analysis conducted in this repository.
@@ -74,7 +74,8 @@ The analysis provides insights into the demographic composition, temporal trends
 
 **CHOROPLETH:** The chloropleth map displays the percentage of non-white incarcerated individuals by indicting county in New York State. Many of the indicting counties with the highest percentages are also counties with relatively higher numbers of nonwhite citizens. A table displaying the indicting counties with the highest nonwhite percentages is copied under the choropleth for context.
 
-                                    ![Alt text](CHOROPLETH/nonwhite_choropleth.png)
+![Alt text](CHOROPLETH/nonwhite_choropleth.png)
+
 | County Name | % Non-White Incarcerated Individuals |
 |-------------|--------------------------------------|
 | Bronx       | 97.97                                |
