@@ -9,11 +9,11 @@ This core dataset provides comprehensive information on individuals under custod
 
 - [NYS Civil Boundaries](https://data.gis.ny.gov/datasets/sharegisny::nys-civil-boundaries/explore?layer=2&location=42.846702%2C-78.687173%2C7.82&showTable=true)
 
-By providing detailed geographical boundaries of administrative units such as counties, cities, towns, and villages within New York State, this dataset enables the creation of accurate and informative choropleth maps that depict various socio-demographic characteristics, including the distribution of incarcerated individuals by indicting county. Choropleth maps created using this dataset allow for the visualization of regional disparities in incarceration rates.
+By providing detailed geographical boundaries of administrative units such as counties, cities, towns, and villages within New York State, this dataset enables the creation of accurate and informative choropleth maps that depict various socio-demographic characteristics, including the distribution of incarcerated individuals by indicting county. Choropleth maps created using this dataset allow for the visualization of regional disparities in incarceration rates. It is filed under the 'CHOROPLETH' folder in this repository directory.
 
 - [Professor Wilcoxen's ChatGPT Crime Sorting Script] (INSERT HERE?)
 
-This Python script, created by Prof. Wilcoxen, sorts through the total_crime_counts.csv file generated from step 7a of the analysis and categorizes each crime entry into a specific category. The resulting CSV file, named `Prof_Wilcoxen_GPT.csv`, provides a structured classification of crimes, facilitating further analysis and visualization of crime statistics.
+This Python script, created by Prof. Wilcoxen, sorts through the total_crime_counts.csv file generated from step 7a of the analysis and categorizes each crime entry into a specific category. The resulting CSV file, named `Prof_Wilcoxen_GPT.csv`, provides a structured classification of crimes, facilitating further analysis and visualization of crime statistics. It is filed under the 'CRIMES' folder in this repository directory.
 
 ## Instructions
 Download the required libraries (pandas, matplotlib, seaborn, and tabulate).
@@ -65,12 +65,20 @@ By following these instructions and running the scripts in the specified order, 
 The analysis provides insights into the demographic composition, temporal trends, facility distribution, geographical patterns, and crime statistics of incarcerated individuals in NYS for the year 2023.
 
 **DEMOGRAPHICS:** According to the age distribution of incarcerated individuals in NYS in 2023, the mean age is 40 years old. The range of incarcerated people in NYS in 2023 ranged from 18 years old to 93, with the most frequent age being 33. 96.1% of incarcerated individuals in New York State in 2023 are identified as male, speaking to an obvious gender disparity. The male to female gender ratio of incarcerated people in NYS in 2023 was 24.61 (~25) to 1. In terms of race, 77.2% of incarcerated individuals in NYS were identified as nonwhite and 22.8% were identified as white. The nonwhite to white ratio of incarcerated people in NYS in 2023 was 3.39 (~4) to 1. In 2023, 15,561 Black people were incarcerated in NYS in 2023 compared to 7,529 Hispanic people, and 7,208 white people.
+![Alt text](DEMOGRAPHICS/age_distribution_2023.png)
+![Alt text](DEMOGRAPHICS/gender_distribution_pie_chart.png)
+![Alt text](DEMOGRAPHICS/race_distribution_pie_chart.png)
+![Alt text](DEMOGRAPHICS/race_distribution_bar_chart.png)
 
 **TIME SERIES:** The time series plot displays a general decrease in the number of incarcerated individuals in NYS from 2008 to 2023, with the most notable decrease occuring between 2020 and 2021 likely due to pandemic overcrowding policies. However, there was a slight increase from 2022 to 2023. When this time series is detailed further by race, the trend remains the same. Generally, across both white nand nonwhite groups, the number of incarcerated individuals decreases from 2008-2023. However, the incarceration numbers are nearly 3x as high for nonwhite people compared to white people for any given year. This is consistent with the previously found nonwhite to white ratio of 3.39 (~4) to 1. 
+![Alt text](<TIME SERIES/timeseries_total_incarcerated_individuals.png>)
+![Alt text](<TIME SERIES/timeseries_race_incarcerated_individuals.png>)
 
 **FACILITY AND INDICTING COUNTY:** The stacked bar charts displaying racial distribution for the correctional facilities and indicting counties in NYS with the highest and lowest amount of individuals reveal an interesting trend. In the larger ("top") jails/prisons and indicting counties, a majority of the incarcerated individuals are nonwhite, particularly Black and Hispanic. However, in the jails/prisons and indicting counties with the least amount of people (i.e., the "bottom" jails and prisons), the racial composition greatly varies from the top facilities and does not follow a discernible majority/minority trend. 52.1 % of incarcerated individuals in NYS in 2023 were being held in medium security level jails and prisons, compared to 44.2% in maximum security. 
 
 **VARIATION:** The variation plots display differences in non-white incarceration percentages by correctional facility and indicting county. The size of each dot corresponds to its relative number of incarcerated people. The average % of nonwhite incarcerated individuals in a NYS jail or prison in 2023 was 74.94%. Seven facilities in NYS had a nonwhite percentage with a difference of greater than 30% from the average; each of these facilities is very small in their numbers.  The average % of nonwhite incarcerated individuals in NYS indicting counties was 48.46%. Seven indicting counties in NYS had a nonwhite percentage with a difference of greater than 40% from the average; these counties have both very large and small numbers of incarcerated individuals.
+![Alt text](VARIATION/variation_nonwhite_by_facility.png)
+![Alt text](VARIATION/variation_nonwhite_by_county.png)
 
 **CHOROPLETH:** The chloropleth map displays the percentage of non-white incarcerated individuals by indicting county in New York State. Many of the indicting counties with the highest percentages are also counties with relatively higher numbers of nonwhite citizens. A table displaying the indicting counties with the highest nonwhite percentages is copied under the choropleth for context.
 
@@ -95,6 +103,10 @@ The analysis provides insights into the demographic composition, temporal trends
 
 
 **CRIMES:** The total number of crimes in 2023 in NYS was 10,447,470. The most frequently most serious crime committed by incarcerated individuals in NYS in 2023 was second degree murder (4,111), followed by criminal possession of a weapon in the second degree (2,152), and manslaughter in the first degree (2,007). When the crimes were categorized, violent crimes were the most frequent most serious crime committed (2,785,992), followed by sex crimes (1,551,291), and white collar crimes (1,298,019). Overall, the percentage distribution of incarcerated individuals in NYS by crime type in 2023 was: 26.66% violent crime; 14.84% sex crime; 12.42% white collar crime; 10% burglary and theft; 9.69% drug offenses; 8.78% crimes involving children; and 8.18% weapons offenses. The heatmap demonstrating the relationship between crime category and the largest NYS jails and prisons shows that the largest numbers of individuals incarcerated for violent crimes are housed in Attice General, Green Haven, and Sing Sing General. The heatmap displaying the relationship between crime category and the race/ethnicity of incarcerated individuals in NYS shows that the largest numbers of individuals incarcerated for violent crimes are Black (1,369,368), Hispanic (662,552), and White (634,304).
+![Alt text](CRIMES/crime_type_pie_chart.png)
+![Alt text](CRIMES/top_mostseriouscrimes.png)
+![Alt text](CRIMES/crime_and_facilities_heatmap.png)
+![Alt text](CRIMES/crime_and_race_heatmap.png)
 
 ## Repository Outputs
 - `DEMOGRAPHICS/age_distribution_2023.png`: Histogram visualization of age distribution of incarcerated individuals in NYS in 2023.
