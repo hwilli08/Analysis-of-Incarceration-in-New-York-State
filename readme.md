@@ -70,10 +70,31 @@ The analysis provides insights into the demographic composition, temporal trends
 
 **FACILITY AND INDICTING COUNTY:** The stacked bar charts displaying racial distribution for the correctional facilities and indicting counties in NYS with the highest and lowest amount of individuals reveal an interesting trend. In the larger ("top") jails/prisons and indicting counties, a majority of the incarcerated individuals are nonwhite, particularly Black and Hispanic. However, in the jails/prisons and indicting counties with the least amount of people (i.e., the "bottom" jails and prisons), the racial composition greatly varies from the top facilities and does not follow a discernible majority/minority trend. 52.1 % of incarcerated individuals in NYS in 2023 were being held in medium security level jails and prisons, compared to 44.2% in maximum security. 
 
-**VARIATION:** The variation plots display differences in non-white incarceration percentages by correctional facility and indicting county. The size of each dot corresponds to its relative number of incarcerated people. The average % of nonwhite incarcerated individuals in NYS jail or prison in 2023 was 74.94%. Seven facilities in NYS had a nonwhite percentage with a difference of greater than 30% from the average; each of these facilities is very small in their numbers.  The average % of nonwhite incarcerated individuals in NYS indicting counties was 48.46%. Seven indicting counties in NYS had a nonwhite percentage with a difference of greater than 40% from the average; these counties have both very large and small numbers of incarcerated individuals.
+**VARIATION:** The variation plots display differences in non-white incarceration percentages by correctional facility and indicting county. The size of each dot corresponds to its relative number of incarcerated people. The average % of nonwhite incarcerated individuals in a NYS jail or prison in 2023 was 74.94%. Seven facilities in NYS had a nonwhite percentage with a difference of greater than 30% from the average; each of these facilities is very small in their numbers.  The average % of nonwhite incarcerated individuals in NYS indicting counties was 48.46%. Seven indicting counties in NYS had a nonwhite percentage with a difference of greater than 40% from the average; these counties have both very large and small numbers of incarcerated individuals.
 
+**CHOROPLETH:** The chloropleth map displays the percentage of non-white incarcerated individuals by indicting county in New York State. Many of the indicting counties with the highest percentages are also counties with relatively higher numbers of nonwhite citizens. A table displaying the indicting counties with the highest nonwhite percentages is copied under the choropleth for context.
 
+![Alt text](CHOROPLETH/nonwhite_choropleth.png)
++-------------+--------------------------------------+
+| County Name | % Non-White Incarcerated Individuals |
++-------------+--------------------------------------+
+|    Bronx    |          97.97169811320755           |
+|    Kings    |          94.76439790575915           |
+|  New York   |           94.7075882068632           |
+|   Queens    |          94.56205894562059           |
+| Westchester |           90.8246225319396           |
+|   Monroe    |          86.42996108949417           |
+|   Nassau    |          85.30805687203792           |
+|  Richmond   |           85.1985559566787           |
+|  Rockland   |           84.7457627118644           |
+|   Albany    |          82.05625606207565           |
+|    Erie     |          81.65680473372781           |
+| Schenectady |           79.0909090909091           |
+|   Suffolk   |          76.36103151862464           |
+|  Onondaga   |          76.20738636363636           |
++-------------+--------------------------------------+
 
+**CRIMES:** The total number of crimes in 2023 in NYS was 10,447,470. The most frequently most serious crime committed by incarcerated individuals in NYS in 2023 was second degree murder (4,111), followed by criminal possession of a weapon in the second degree (2,152), and manslaughter in the first degree (2,007). When the crimes were categorized, violent crimes were the most frequent most serious crime committed (2,785,992), followed by sex crimes (1,551,291), and white collar crimes (1,298,019). Overall, the percentage distribution of incarcerated individuals in NYS by crime type in 2023 was: 26.66% violent crime; 14.84% sex crime; 12.42% white collar crime; 10% burglary and theft; 9.69% drug offenses; 8.78% crimes involving children; and 8.18% weapons offenses. The heatmap demonstrating the relationship between crime category and the largest NYS jails and prisons shows that the largest numbers of individuals incarcerated for violent crimes are housed in Attice General, Green Haven, and Sing Sing General. The heatmap displaying the relationship between crime category and the race/ethnicity of incarcerated individuals in NYS shows that the largest numbers of individuals incarcerated for violent crimes are Black (1,369,368), Hispanic (662,552), and White (634,304).
 
 ## Repository Outputs
 - `DEMOGRAPHICS/age_distribution_2023.png`: Histogram visualization of age distribution of incarcerated individuals in NYS in 2023.

@@ -54,6 +54,7 @@ plt.show()
 
 #Calculating percentages.
 category_percentages = category_counts / total_crimes * 100
+print(category_percentages)
 
 #Visual Analysis: Pie Chart
 plt.figure(figsize=(8, 8))
