@@ -11,6 +11,8 @@ This core dataset provides comprehensive information on individuals under custod
 
 By providing detailed geographical boundaries of administrative units such as counties, cities, towns, and villages within New York State, this dataset enables the creation of accurate and informative choropleth maps that depict various socio-demographic characteristics, including the distribution of incarcerated individuals by indicting county. Choropleth maps created using this dataset allow for the visualization of regional disparities in incarceration rates, facilitating a better understanding of the spatial dynamics of the criminal justice system and informing policy decisions aimed at promoting equity across different regions of New York State.
 
+- Prof. Wilcoxen's AI-generated ChatGPT File (Prof_Wilcoxen_GPT.csv): This Python script, created by Prof. Wilcoxen, sorts through the total_crime_counts.csv file generated from step 7a of the analysis and categorizes each crime entry into a specific category. The resulting CSV file, named "Prof_Wilcoxen_GPT.csv," provides a structured classification of crimes, facilitating further analysis and visualization of crime statistics.
+
 ## Instructions
 Download the required libraries (pandas, matplotlib, seaborn, and tabulate).
 
@@ -72,15 +74,15 @@ The analysis provides insights into the demographic composition, temporal trends
 - `INDCOUNTY/top_10_counties_race_distribution.png`: Stacked bar chart displaying racial distribution for the indicting counties in NYS with the highest amounts of incarcerated individuals.
 - `INDCOUNTY/bottom_5_counties_race_distribution.png`: Stacked bar chart displaying racial distribution for the indicting counties in NYS with the lowest amounts of incarcerated individuals.
 - `INDCOUNTY/nonwhite_county_counts.csv`: Counts of non-white individuals incarcerated in each indicting county.
-- `VARIATION/variation_nonwhite_by_county.png`: Variation plot by indicting county.
-- `VARIATION/variation_nonwhite_by_facility.png`: Variation plot by correctional facility.
-- `CHOROPLETH/nonwhite_choropleth.png`: Chloropleth map.
+- `VARIATION/variation_nonwhite_by_county.png`: Variation plot illustrating differences in non-white incarceration percentages by indicting county.
+- `VARIATION/variation_nonwhite_by_facility.png`: Variation plot depicting differences in non-white incarceration percentages by correctional facility.
+- `CHOROPLETH/nonwhite_choropleth.png`: Chloropleth map displaying the percentage of non-white incarcerated individuals by indicting county in New York State.
 - `CHOROPLETH/percent_nonwhite_sorted_counties.csv`: Percentage of non-white incarcerated individuals sorted by indicting county.
 - `CRIMES/top_mostseriouscrimes.png`: Visualization of the most frequent serious crimes.
 - `CRIMES/total_crime_counts.csv`: Total counts of each crime.
-- `CRIMES/crime_type_bar_chart.png`:
-- `CRIMES/crime_type_pie_chart.png`:
-- `CRIMES/crime_and_facilities_heatmap.png`:
-- `CRIMES/crime_and_race_heatmap.png`:
+- `CRIMES/crime_type_bar_chart.png`: Bar chart illustrating the number of incarcerated individuals in NYS by crime type for 2023.
+- `CRIMES/crime_type_pie_chart.png`: Pie chart depicting the percentage distribution of incarcerated individuals in NYS by crime type for 2023.
+- `CRIMES/crime_and_facilities_heatmap.png`: Heatmap showing the relationship between crime categories and the top 10 NYS correctional facilities for 2023.
+- `CRIMES/crime_and_race_heatmap.png`: Heatmap visualizing the relationship between crime categories and race/ethnicity of incarcerated individuals in NYS for 2023.
 
 
