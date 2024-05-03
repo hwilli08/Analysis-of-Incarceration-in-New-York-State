@@ -43,7 +43,7 @@ if not top_10_facilities.empty:
 bottom_10_facilities = facility_counts.tail(10)
 if not bottom_10_facilities.empty:
     bottom_10_facilities.set_index('Housing Facility').drop(columns='Total_Count').plot(kind='bar', stacked=True, figsize=(10, 8), color=['#BC8F8F', '#A0522D', '#CD853F', '#D2691E', '#8B5A2B', 'tan'])
-    plt.title('Racial Distribution of Incarcerated Individuals in Bottom 10 Jails/Prisonsin NYS (2023)', fontsize=14)
+    plt.title('Racial Distribution of Incarcerated Individuals in Bottom 10 Jails/Prisons in NYS (2023)', fontsize=14)
     plt.xlabel('Jails/Prisons with the Least Amount of Incarcerated Individuals in NYS', fontsize=12)
     plt.ylabel('Number of Incarcerated Individuals', fontsize=12)
     plt.legend(title='Race/Ethnicity')

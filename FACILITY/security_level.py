@@ -20,15 +20,15 @@ yearly_security_level_counts.plot(marker='o', linestyle='-', ax=plt.gca(), color
 plt.title('Incarceration Security Level Trends in NYS (2008-2023)')
 plt.xlabel('Year')
 plt.ylabel('Number of Incarcerated Individuals')
-plt.legend(title='Housing Security Level')
+plt.legend(title='Incarceration Security Level')
 plt.grid(True)
 plt.tight_layout()
 plt.savefig("security_level_trends.png")
 plt.show()
 
-#Printing the counts of each facility type.
+#Printing the counts of each security level type.
 facility_counts = yearly_security_level_counts.sum().reset_index()
-print("Counts of Each Facility Type:")
+print("Counts of Each Security Level Type:")
 print(tabulate(facility_counts, headers=["Facility Security Level", "Count"], tablefmt="grid"))
 
 #Creating a pie chart for security level.

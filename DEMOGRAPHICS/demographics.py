@@ -74,7 +74,7 @@ white_percentage = white_count / race_counts.sum() * 100
 #Plotting pie chart for race distribution.
 plt.figure(figsize=(10, 7))
 plt.pie([non_white_percentage, white_percentage], labels=['Non-White', 'White'], autopct='%1.1f%%', startangle=140, colors=['#8B4513', 'tan']) 
-plt.title('Race Distribution of Incarcerated Individuals in New York State (2023)')
+plt.title('Aggregated Race Distribution of Incarcerated Individuals in New York State (2023)')
 plt.tight_layout()
 plt.savefig('race_distribution_pie_chart.png')
 plt.show()
